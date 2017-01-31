@@ -16,9 +16,9 @@ var answers = [["Ostrich", "Sparrow", "Eagle", "Robin", "Roadrunner"],["Venus", 
               ["3 Feet", "5 Feet", "7 Feet", "9 Feet", "11 Feet"], ["South America", "Africa", "North America", "Asia", "Europe"], ["California", "Arizona", "North Dakota", "New Mexico", "South Dakota"],
               ["John Adams", "Abraham Lincon", "Thomas Jefferson", "George Washington","John Jay"], ["A","B","C","D","E"]];
 var correctAnswers = ["Ostrich", "Mercury", "7", "2", "Georgia", "2", "Brazil", "Nevada", "Neil Armstrong", "Adverb", "September", "7 Feet", "South America", "Arizona", "George Washington"];
-// var incorrectAnswers =[["Sparrow", "Eagle", "Robin", "Roadrunner"],["Venus", "Earth", "Pluto", "Planet X"], ["4","6","8","9"],["3","1","4","6"],
-//                         ["Texas", "Florida", "Alabama", "Louisiana"], ["0","1","3","5"] ];
 
+$(document).ready(function(){
+//Loads the question on page load
 $('.questions').text(questionItems[0]);
   $('#a').text(answers[question][0]);
   $('#b').text(answers[question][1]);
@@ -40,13 +40,13 @@ $('.answers').on('click', function(){
 
   if ( answer === correctAnswers[question]){
     alert("YES!!! That is correct");
-    correctAnswer();
+    // correctAnswer();
     $('#next').css('display', 'block');
     question++;
   } else {
     alert("That is incorrect");
     wrongAnswer();
-    // question++;
+    question++;
   }
 });
 
@@ -74,8 +74,9 @@ $('.questions').text(questionItems[question]);
 
 //wrong answer??
 function wrongAnswer(){
+    questionNumber++;
     $('#questionNumber').text(questionNumber);
-    // question++;
+    question++;
     $(score).text(score);
     $('.questions').text(questionItems[question]);
         $('#a').text(answers[question][0]);
@@ -83,7 +84,6 @@ function wrongAnswer(){
         $('#c').text(answers[question][2]);
         $('#d').text(answers[question][3]);
         $('#e').text(answers[question][4]);
-        // questionNumber++;
         endOfGame();
   }
 
@@ -108,4 +108,6 @@ function endOfGame(){
 //resets game by reloading the page
 $('#reset').on('click', function(){
   location.reload();
+});
+
 });

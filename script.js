@@ -2,6 +2,7 @@
 var question = 0;
 var questionNumber = 1;
 var answer;
+var score = 0;
 
 
 var resetItems = ["A", "B", "C", "D"];
@@ -25,6 +26,7 @@ $('.questions').text(questionItems[0]);
   $('#d').text(answers[question][3]);
   $('#e').text(answers[question][4]);
 $('#questionNumber').text(questionNumber);
+$('#score').text(score);
 questionNumber++;
 $('#reset').css('display', 'none');
 console.log("button click");
@@ -37,14 +39,17 @@ $('.answers').on('click', function(){
 
   if ( answer === correctAnswers[question]){
     alert("YES!!! That is correct");
+    score = score + 1000;
   } else {
     alert("That is incorrect");
+    score = score - 1000;
   }
 });
 
-$('#next').on('click', function(e){
+$('#next').on('click', function(){
   $('#questionNumber').text(questionNumber);
   question++;
+  $('#score').text(score);
 
   // $('#next').css("display", "none");
 $('.questions').text(questionItems[question]);
@@ -55,11 +60,6 @@ $('.questions').text(questionItems[question]);
     $('#e').text(answers[question][4]);
 
     questionNumber++;
-    // if (questionNumber < questionItems.length) {
-    //   console.log(questionNumber);
-    // } else {
-    //   alert("Game Over!");
-    // }
     endOfGame();
 });
 

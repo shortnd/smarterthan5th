@@ -41,7 +41,7 @@ main {
   justify-content: space-between;
   width: 90%;
 }
-#questionNumber {
+#questionNumber, #score {
  color: yellow;
 }
 .questions {

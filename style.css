@@ -1,5 +1,5 @@
 body{
-
+background: rgb(145, 145, 145);
 }
 #wrapper {
   width: 1000px;
@@ -11,7 +11,7 @@ body{
   align-items: center;
 }
 header {
-  background:
+
 }
 footer {
 
@@ -22,11 +22,21 @@ h1 {
 h2 {
 
 }
+main {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-between;
+}
 #questionNumber {
 
 }
 .questions {
-
+  font-family: 'Pangolin', cursive;
+  font-size: 3em;
+  background-image: url("https://puzzlecommand.com/builds/en/images/daily/themes/chalkboard/background.jpg");
+  background-size: cover;
+  height: 100%;
 }
 .answers {
 

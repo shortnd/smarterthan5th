@@ -43,7 +43,7 @@ $('.answers').on('click', function(){
 
 $('#next').on('click', function(){
   $('#questionNumber').text(questionNumber);
-  $('#next').css("display", "none");
+  // $('#next').css("display", "none");
   $('#question').text(questionItems[question]);
     $('#a').text(answers[question][0]);
     $('#b').text(answers[question][1]);

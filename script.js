@@ -15,3 +15,39 @@ var answers = [["Ostrich", "Sparrow", "Eagle", "Robin", "Roadrunner"],["Venus", 
               ["3 Feet", "5 Feet", "7 Feet", "9 Feet", "11 Feet"], ["South America", "Africa", "North America", "Asia", "Europe"], ["California", "Arizona", "North Dakota", "New Mexico", "South Dakota"],
               ["John Adams", "Abraham Lincon", "Thomas Jefferson", "George Washington","John Jay"]];
 var correctAnswers = ["Ostrich", "Mercury", "7", "2", "Georgia", "2", "Brazil", "Nevada", "Neil Armstrong", "Adverb", "September", "7 Feet", "South America", "Arizona", "George Washington"];
+
+
+$('.questions').text(questionItems[0]);
+  $('#a').text(answers[question][0]);
+  $('#b').text(answers[question][1]);
+  $('#c').text(answers[question][2]);
+  $('#d').text(answers[question][3]);
+  $('#e').text(answers[question][4]);
+questionNumber++;
+$('#questionNumber').text(questionNumber);
+console.log("button click");
+
+
+$('.answers').on('click', function(){
+  console.log($(this).text());
+  answer = $(this).text();
+
+  if ( answer === correctAnswers[question]){
+    alert("YES!!! That is correct");
+  } else if (answer === ""){
+    alert("Good Game!");
+  } else {
+    alert("That is incorrect");
+  }
+});
+
+$('#next').on('click', function(){
+  $('#questionNumber').text(questionNumber);
+  $('#next').css("display", "none");
+  $('#question').text(questionItems[question]);
+    $('#a').text(answers[question][0]);
+    $('#b').text(answers[question][1]);
+    $('#c').text(answers[question][2]);
+    $('#d').text(answers[question][3]);
+    $('#e').text(answers[question][4]);
+});

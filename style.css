@@ -17,6 +17,7 @@ header {
   line-height: 2em;
   padding: 5%;
   background: #2B5439;
+  border: 15px #644619 solid;
 }
 footer {
   height: 50px;
@@ -29,6 +30,7 @@ footer {
 h1 {
   font-size: 45px;
   font-family: "Arial", sans-serif;
+  font-variant: small-caps;
 }
 h2 {
   font-size: 1.5em;
@@ -39,7 +41,7 @@ main {
   flex-direction: column;
   align-content: center;
   justify-content: space-between;
-  width: 90%;
+  width: 100%;
 }
 #questionNumber, #score {
  color: yellow;
@@ -65,6 +67,7 @@ main {
   justify-content: center;
   align-content: space-between;
   margin: 3em;
+  width: 100%;
 }
 #a {
   background: red;
@@ -95,7 +98,6 @@ button {
   width: 200px;
 }
 ul {
-
 }
 li {
   list-style: none;

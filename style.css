@@ -1,0 +1,55 @@
+body{
+
+}
+#wrapper {
+  width: 1000px;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+}
+header {
+  background:
+}
+footer {
+
+}
+h1 {
+
+}
+h2 {
+
+}
+#questionNumber {
+
+}
+.questions {
+
+}
+.answers {
+
+}
+#a {
+
+}
+#b {
+
+}
+#c {
+
+}
+#d {
+
+}
+button {
+
+}
+ul {
+
+}
+li {
+  list-style: none;
+  display: inline-block;
+}

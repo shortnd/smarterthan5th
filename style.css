@@ -1,20 +1,28 @@
 body{
 background: rgb(145, 145, 145);
+/*width: 900px;*/
+margin: auto;
 }
 #wrapper {
-  width: 1000px;
+  width: 100%;
   height: 100vh;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   align-items: center;
+  background: white;
 }
 header {
 
 }
 footer {
-
+  height: 50px;
+  border-top: 2px black dashed;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 h1 {
 
@@ -36,10 +44,21 @@ main {
   font-size: 3em;
   background-image: url("https://puzzlecommand.com/builds/en/images/daily/themes/chalkboard/background.jpg");
   background-size: cover;
-  height: 100%;
+  height: 6em;
+  width: 100%;
+  margin: auto;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  border: 15px #644619 solid;
 }
-.answers {
-
+.answer {
+  display: flex;
+  justify-content: center;
+  align-content: space-between;
+  margin: 3em;
 }
 #a {
 
@@ -54,7 +73,8 @@ main {
 
 }
 button {
-
+  padding: 1em;
+  font-size: 18px;
 }
 ul {
 

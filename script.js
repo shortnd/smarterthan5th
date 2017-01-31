@@ -34,17 +34,16 @@ $('.answers').on('click', function(){
 
   if ( answer === correctAnswers[question]){
     alert("YES!!! That is correct");
-  } else if (answer === ""){
-    alert("Good Game!");
   } else {
     alert("That is incorrect");
   }
 });
 
-$('#next').on('click', function(){
+$('#next').on('click', function(e){
   $('#questionNumber').text(questionNumber);
+  question++;
   // $('#next').css("display", "none");
-  $('#question').text(questionItems[question]);
+$('.questions').text(questionItems[question]);
     $('#a').text(answers[question][0]);
     $('#b').text(answers[question][1]);
     $('#c').text(answers[question][2]);

@@ -146,4 +146,5 @@ li {
   color: white;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+  border-bottom: 15px rgb(61, 61, 61) solid;
 }

@@ -16,7 +16,7 @@ function incorrect(){
   //Moves onto the next question
   question++;
   //Adds to the questionNumber variable to display what question the user is on
-  questionNumber++;
+  // questionNumber++;
   //writes the variable score to the #score class in html
   $('#score').text(score);
     //writes the questionItem array to the .questions div
@@ -34,6 +34,10 @@ function correct(){
   alert("YES!!! That is correct");
   //adds 1000 to score
   score = score + 1000;
+}
+//function that adds the numbers correctly to questionNumber variable
+function addNumbers(){
+  questionNumber++;
 }
 
 
@@ -63,7 +67,6 @@ $('.questions').text(questionItems[0]);
 $('#questionNumber').text(questionNumber);
 $('#score').text(score);
 questionNumber++;
-// $('#next').css('display', 'none');
 $('#reset').css('display', 'none');
 // console.log("button click");
 
@@ -76,6 +79,8 @@ $('.answers').on('click', function(){
   //Checks the answer is incorrect runs the incorrect function
   if ( answer !== correctAnswers[question]){
     incorrect();
+    // questionNumber++;
+    $('#questionNumber').text(questionNumber);
   //Checks the answer is corrects then runs the correct function
   //along with also moving to the next question and changes the
   //score then loads the new question and answers and changes the
@@ -93,12 +98,14 @@ $('.answers').on('click', function(){
       $('#d').text(answers[question][3]);
       $('#e').text(answers[question][4]);
 
-      questionNumber++;
-      //runs the endOfGame function to see if there are more
-      //questions left or show the reset button after the game
-      //ends
-      endOfGame();
+
+
     }
+    addNumbers();
+    //runs the endOfGame function to see if there are more
+    //questions left or show the reset button after the game
+    //ends
+    endOfGame();
   }
 );
 
@@ -110,6 +117,8 @@ function endOfGame(){
   } else {
     //shows the reset button and then hides all the answer
     //buttons
+    $('.numberQuestion').css("display", "none");
+    $('.quizScore').css({"text-align":"center", "font-size": "3em"});
     $('#reset').css("display", "block");
     $('#a').css('display', 'none');
     $('#b').css('display', 'none');

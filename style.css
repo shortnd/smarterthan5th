@@ -21,10 +21,10 @@ margin: auto;
   height: 100vh;
   margin: 0 auto;
   background-color: #fff;
-background-image:
-linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
-linear-gradient(#eee .1em, transparent .1em);
-background-size: 100% 1.2em;
+  background-image:
+  linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
+  linear-gradient(#eee .1em, transparent .1em);
+  background-size: 100% 1.2em;
 }
 header {
   line-height: 2em;
@@ -95,9 +95,11 @@ main {
 #a, #b, #c, #d, #e {
   width: 100%;
   background: #2B5439;
+  font-family: 'Pangolin', cursive;
   background-image: url("https://puzzlecommand.com/builds/en/images/daily/themes/chalkboard/background.jpg");
   border: 8px #644619 solid;
   border-radius: 10%;
+  letter-spacing: .5px;
   color: white;
 }
 #a {

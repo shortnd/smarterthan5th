@@ -1,47 +1,71 @@
+/*Google Fonts
+font-family: 'Swanky and Moo Moo', cursive;
+font-family: 'Schoolbell', cursive;
+font-family: 'Reenie Beanie', cursive;
+font-family: 'Pangolin', cursive;
+*/
+
+
+
 body{
 background: rgb(145, 145, 145);
 /*width: 900px;*/
 margin: auto;
 }
 #wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  flex-direction: column;
   width: 1100px;
   height: 100vh;
   margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  align-items: center;
-  background: white;
+  background-color: #fff;
+background-image:
+linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
+linear-gradient(#eee .1em, transparent .1em);
+background-size: 100% 1.2em;
 }
 header {
   line-height: 2em;
   padding: 5%;
   background: #2B5439;
+  background-image: url("https://puzzlecommand.com/builds/en/images/daily/themes/chalkboard/background.jpg");
+  background-size: cover;
   border: 15px #644619 solid;
 }
 footer {
+  display: flex;
+  justify-content: center;
+  align-content: center;
   height: 50px;
   border-top: 2px black dashed;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 h1 {
   font-size: 45px;
-  font-family: "Arial", sans-serif;
+  font-family: 'Pangolin', cursive;
   font-variant: small-caps;
+  text-align: center;
+  color: white;
 }
 h2 {
   font-size: 1.5em;
-  font-family: "Arial", sans-serif;
+  font-family: 'Pangolin', cursive;
+  color: white;
+}
+h3 {
+  padding: 5px;
+  font-family: 'Reenie Beanie', cursive;
+  /*font-family: 'Swanky and Moo Moo', cursive;*/
+  font-size: 2em;
 }
 main {
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  justify-content: space-between;
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  flex-direction: column;
 }
 #questionNumber, #score {
  color: yellow;
@@ -55,39 +79,46 @@ main {
   width: 70%;
   margin: 15px auto;
   color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   padding: 5px;
   border: 15px #644619 solid;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-content: center;
 }
 .answer {
-  display: flex;
-  justify-content: center;
-  align-content: space-between;
   margin: 3em;
   width: 100%;
 }
+#a, #b, #c, #d, #e {
+  width: 100%;
+  background: darkgreen;
+  background-image: url("https://puzzlecommand.com/builds/en/images/daily/themes/chalkboard/background.jpg");
+  border: 8px #644619 solid;
+  border-radius: 10%;
+  color: white;
+}
 #a {
-  background: red;
+  /*background: red;*/
   width: 100%;
 }
 #b {
-  background: blue;
+  /*background: blue;*/
   color: white;
   width: 100%;
 }
 #c {
-  background: green;
+  /*background: green;*/
   width: 100%;
 }
 #d {
-  background: yellow;
+  /*background: yellow;*/
   width: 100%;
 }
 #e {
-  background: purple;
+  background-image: url("https://puzzlecommand.com/builds/en/images/daily/themes/chalkboard/background.jpg");
+  /*background: purple;*/
   width: 100%;
 }
 button {
@@ -98,8 +129,18 @@ button {
   width: 200px;
 }
 ul {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+
 }
 li {
+  margin: 10px;
   list-style: none;
-  display: inline-block;
+  padding: 15px;
+  /*display: inline-block;*/
+}
+#next {
+  align-items: center;
 }

@@ -28,3 +28,5 @@ As a user, I should be able to see my score while I am playing to know how I am 
 As a user, I should be able to see what question I am on.
 
 As a user, I should be able to dismiss alerts and then move onto the next question.
+
+As a user, I should be able to see my score at the end of the game.

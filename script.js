@@ -3,6 +3,25 @@ var question = 0;
 var questionNumber = 1;
 var answer;
 var score = 0;
+function incorrect(){
+  alert("That is incorrect");
+  score = score - 1000;
+  question++;
+  questionNumber++;
+  $('#score').text(score);
+    $('.questions').text(questionItems[question]);
+      $('#a').text(answers[question][0]);
+      $('#b').text(answers[question][1]);
+      $('#c').text(answers[question][2]);
+      $('#d').text(answers[question][3]);
+      $('#e').text(answers[question][4]);
+}
+function correct(){
+  alert("YES!!! That is correct");
+  score = score + 1000;
+  $('#next').css('display', 'block');
+}
+
 
 var resetItems = ["A", "B", "C", "D"];
 var questionItems = ["What is the fastest bird on foot?", "What planet is closest to the sun?", "A heptagon is a shape with how many sides?", "How long is one regular term for a U.S. Representative?",
@@ -17,8 +36,7 @@ var answers = [["Ostrich", "Sparrow", "Eagle", "Robin", "Roadrunner"],["Venus", 
               ["John Adams", "Abraham Lincon", "Thomas Jefferson", "George Washington","John Jay"], ["A","B","C","D","E"]];
 var correctAnswers = ["Ostrich", "Mercury", "7", "2", "Georgia", "2", "Brazil", "Nevada", "Neil Armstrong", "Adverb", "September", "7 Feet", "South America", "Arizona", "George Washington"];
 
-$(document).ready(function(){
-//Loads the question on page load
+
 $('.questions').text(questionItems[0]);
   $('#a').text(answers[question][0]);
   $('#b').text(answers[question][1]);
@@ -36,26 +54,17 @@ console.log("button click");
 $('.answers').on('click', function(){
   console.log($(this).text());
   answer = $(this).text();
-
-
-  if ( answer === correctAnswers[question]){
-    alert("YES!!! That is correct");
-    // correctAnswer();
-    $('#next').css('display', 'block');
-    question++;
-  } else {
-    alert("That is incorrect");
-    wrongAnswer();
-    question++;
+  if ( answer !== correctAnswers[question]){
+    incorrect();
+  } else if ( answer === correctAnswers[question]){
+    correct();
+    }
   }
-});
+);
 
-
-function correctAnswer(){
 $('#next').on('click', function(){
   $('#questionNumber').text(questionNumber);
-  // question++;
-  score = 1000 + score;
+  question++;
   $('#score').text(score);
 
   $('#next').css("display", "none");
@@ -66,26 +75,11 @@ $('.questions').text(questionItems[question]);
     $('#d').text(answers[question][3]);
     $('#e').text(answers[question][4]);
 
-    // questionNumber++;
+    questionNumber++;
     endOfGame();
 });
-}
 
 
-//wrong answer??
-function wrongAnswer(){
-    questionNumber++;
-    $('#questionNumber').text(questionNumber);
-    question++;
-    $(score).text(score);
-    $('.questions').text(questionItems[question]);
-        $('#a').text(answers[question][0]);
-        $('#b').text(answers[question][1]);
-        $('#c').text(answers[question][2]);
-        $('#d').text(answers[question][3]);
-        $('#e').text(answers[question][4]);
-        endOfGame();
-  }
 
 //end of game
 function endOfGame(){
@@ -93,7 +87,7 @@ function endOfGame(){
     console.log(questionNumber);
     $('#reset').css("display", "none");
   } else {
-    alert("Game Over!");
+    // alert("Game Over!");
     $('#next').css("display", "none");
     $('#reset').css("display", "block");
     $('#a').css('display', 'none');
@@ -108,6 +102,4 @@ function endOfGame(){
 //resets game by reloading the page
 $('#reset').on('click', function(){
   location.reload();
-});
-
 });

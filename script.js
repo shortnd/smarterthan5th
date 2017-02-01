@@ -39,8 +39,6 @@ function correct(){
 function addNumbers(){
   questionNumber++;
 }
-
-
 //Array with all questions
 var questionItems = ["What is the fastest bird on foot?", "What planet is closest to the sun?", "A heptagon is a shape with how many sides?", "How long is one regular term for a U.S. Representative?",
                       "Which of the following states is NOT on the Gulf of Mexico?", "What is the lowest prime number?", "What is the largest South American country by area?",

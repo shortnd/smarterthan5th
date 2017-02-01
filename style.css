@@ -99,6 +99,7 @@ main {
   background-image: url("https://puzzlecommand.com/builds/en/images/daily/themes/chalkboard/background.jpg");
   border: 8px #644619 solid;
   border-radius: 10%;
+  letter-spacing: .5px;
   color: white;
 }
 #a {

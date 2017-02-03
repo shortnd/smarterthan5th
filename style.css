@@ -128,6 +128,7 @@ button {
   margin: 15px;
   border: none;
   width: 200px;
+  outline: none;
 }
 ul {
   width: 90%;

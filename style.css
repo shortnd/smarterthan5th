@@ -5,147 +5,157 @@ font-family: 'Reenie Beanie', cursive;
 font-family: 'Pangolin', cursive;
 */
 
-
-
-body{
-background: rgb(145, 145, 145);
-/*width: 900px;*/
-margin: auto;
+body {
+    background: rgb(145, 145, 145);
+    /*width: 900px;*/
+    margin: auto;
 }
+
 #wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-content: center;
-  flex-direction: column;
-  width: 1100px;
-  height: 100vh;
-  margin: 0 auto;
-  background-color: #fff;
-  background-image:
-  linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
-  linear-gradient(#eee .1em, transparent .1em);
-  background-size: 100% 1.2em;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    flex-direction: column;
+    width: 1100px;
+    height: 100vh;
+    margin: 0 auto;
+    background-color: #fff;
+    background-image: linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px), linear-gradient(#eee .1em, transparent .1em);
+    background-size: 100% 1.2em;
 }
+
 header {
-  line-height: 2em;
-  padding: 5%;
-  background: #2B5439;
-  background-image: url("https://static1.squarespace.com/static/55e0d8d9e4b099039c59b7b8/55e4a3f8e4b0ae5c1abeed44/55e4a3fae4b0ae5c1abeed49/1441047550596/chalkboard1.jpg?format=2500w");
-  background-size: cover;
-  border: 15px #644619 solid;
+    line-height: 2em;
+    padding: 5%;
+    background: #2B5439;
+    background-image: url("https://static1.squarespace.com/static/55e0d8d9e4b099039c59b7b8/55e4a3f8e4b0ae5c1abeed44/55e4a3fae4b0ae5c1abeed49/1441047550596/chalkboard1.jpg?format=2500w");
+    background-size: cover;
+    border: 15px #644619 solid;
 }
+
 footer {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  height: 50px;
-  border-top: 2px black dashed;
-  width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 50px;
+    border-top: 2px black dashed;
+    width: 100%;
 }
+
 h1 {
-  font-size: 45px;
-  font-family: 'Pangolin', cursive;
-  font-variant: small-caps;
-  text-align: center;
-  color: white;
+    font-size: 45px;
+    font-family: 'Pangolin', cursive;
+    font-variant: small-caps;
+    text-align: center;
+    color: white;
 }
+
 h2 {
-  font-size: 1.5em;
-  font-family: 'Pangolin', cursive;
-  color: white;
+    font-size: 1.5em;
+    font-family: 'Pangolin', cursive;
+    color: white;
 }
+
 h3 {
-  padding: 5px;
-  font-family: 'Reenie Beanie', cursive;
-  /*font-family: 'Swanky and Moo Moo', cursive;*/
-  font-size: 2em;
+    padding: 5px;
+    font-family: 'Reenie Beanie', cursive;
+    /*font-family: 'Swanky and Moo Moo', cursive;*/
+    font-size: 2em;
 }
+
 main {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-content: center;
-  flex-direction: column;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    flex-direction: column;
 }
+
 #questionNumber, #score {
- color: yellow;
+    color: yellow;
 }
+
 .questions {
-  font-family: 'Pangolin', cursive;
-  font-size: 3em;
-  background: #2B5439;
-  background-image: url("https://static1.squarespace.com/static/55e0d8d9e4b099039c59b7b8/55e4a3f8e4b0ae5c1abeed44/55e4a3fae4b0ae5c1abeed49/1441047550596/chalkboard1.jpg?format=2500w");
-  background-size: cover;
-  height: 6em;
-  width: 70%;
-  margin: 15px auto;
-  color: white;
-  padding: 5px;
-  border: 15px #644619 solid;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  align-content: center;
+    font-family: 'Pangolin', cursive;
+    font-size: 3em;
+    background: #2B5439;
+    background-image: url("https://static1.squarespace.com/static/55e0d8d9e4b099039c59b7b8/55e4a3f8e4b0ae5c1abeed44/55e4a3fae4b0ae5c1abeed49/1441047550596/chalkboard1.jpg?format=2500w");
+    background-size: cover;
+    height: 6em;
+    width: 70%;
+    margin: 15px auto;
+    color: white;
+    padding: 5px;
+    border: 15px #644619 solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-content: center;
 }
+
 .answer {
-  margin: 3em;
-  width: 100%;
+    margin: 3em;
+    width: 100%;
 }
+
 #a, #b, #c, #d, #e {
-  width: 100%;
-  background: #2B5439;
-  font-family: 'Pangolin', cursive;
-  background-image: url("https://static1.squarespace.com/static/55e0d8d9e4b099039c59b7b8/55e4a3f8e4b0ae5c1abeed44/55e4a3fae4b0ae5c1abeed49/1441047550596/chalkboard1.jpg?format=2500w");
-  border: 8px #644619 solid;
-  border-radius: 10%;
-  letter-spacing: .5px;
-  color: white;
+    width: 100%;
+    background: #2B5439;
+    font-family: 'Pangolin', cursive;
+    background-image: url("https://static1.squarespace.com/static/55e0d8d9e4b099039c59b7b8/55e4a3f8e4b0ae5c1abeed44/55e4a3fae4b0ae5c1abeed49/1441047550596/chalkboard1.jpg?format=2500w");
+    border: 8px #644619 solid;
+    border-radius: 10%;
+    letter-spacing: .5px;
+    color: white;
 }
+
 #a {
-
-  width: 100%;
+    width: 100%;
 }
+
 #b {
-
-
-  width: 100%;
+    width: 100%;
 }
+
 #c {
-
-  width: 100%;
+    width: 100%;
 }
+
 #d {
-
-  width: 100%;
+    width: 100%;
 }
+
 #e {
-  width: 100%;
+    width: 100%;
 }
-button {
-  padding: 1em;
-  font-size: 18px;
-  margin: 15px;
-  border: none;
-  width: 200px;
-  outline: none;
-}
-ul {
-  width: 90%;
-  display: flex;
-  justify-content: center;
-  align-content: center;
 
+button {
+    padding: 1em;
+    font-size: 18px;
+    margin: 15px;
+    border: none;
+    width: 200px;
+    outline: none;
 }
+
+ul {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
 li {
-  margin: 10px;
-  list-style: none;
-  padding: 15px;
+    margin: 10px;
+    list-style: none;
+    padding: 15px;
 }
+
 #reset {
-  background: black;
-  color: white;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  border-bottom: 15px rgb(61, 61, 61) solid;
+    background: black;
+    color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom: 15px rgb(61, 61, 61) solid;
 }
